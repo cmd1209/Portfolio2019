@@ -23,6 +23,16 @@
 			}
 		});
 
+
+		$('#section3').on('inview', function(event, isInView) {
+			if (isInView) {
+				$('#topvid').fadeOut(3000);
+			} else {
+				// element has gone out of viewport
+				$('#topvid').fadeIn(3000);
+			}
+		});
+
 		$('#projectgrid').on('inview', function(event, isInView) {
 			if (isInView) {
 				$('.project').addClass('slide-in-fwd-center ');

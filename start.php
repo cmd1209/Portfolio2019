@@ -1,7 +1,15 @@
 <?php /* Template Name: start*/ ?>
 <?php get_header(); ?>
 
-<section class="motionbackground01 vh100 flex flexcolumn flexcenter dbg" id="section1">
+<video poster="https://chadmdanford.com/wp-content/uploads/2018/11/shadowwork-poster.jpg" id="bottomvid" playsinline autoplay muted loop>
+  <source src="https://chadmdanford.com/wp-content/uploads/2018/11/workshadows.mp4" type="video/mp4">
+</video>  
+
+<video poster="https://chadmdanford.com/wp-content/uploads/2018/11/elbebridge-poster.jpg" id="topvid" playsinline autoplay muted loop>
+  <source src="https://chadmdanford.com/wp-content/uploads/2018/11/Elbbridge02.mp4" type="video/mp4">
+</video>
+
+<section class="linesgradient vh100 flex flexcolumn flexcenter dbg" id="section1">
 	<?php include('logo.php'); ?>
 	<div class="container centered bounce-in-right delay3">
 		<h1>
@@ -19,7 +27,7 @@
 	</div>
 </section>
 
-<section class="motionbackground02 vh150 flex flexcolumn flexcenter dbg" id="section3">
+<section class="linesgradient vh150 flex flexcolumn flexcenter dbg" id="section3">
 	<div class="container centered" >
 			
 		<?php // the query
