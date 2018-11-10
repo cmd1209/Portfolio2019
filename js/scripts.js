@@ -23,7 +23,6 @@
 			}
 		});
 
-
 		$('#section3').on('inview', function(event, isInView) {
 			if (isInView) {
 				$('#topvid').fadeOut(3000);
