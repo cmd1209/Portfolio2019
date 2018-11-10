@@ -1,4 +1,4 @@
-<svg class="logo" width="303px" height="99px" viewBox="0 0 303 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg class="herologo" width="303px" height="99px" viewBox="0 0 303 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>CMd</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>

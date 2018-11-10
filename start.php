@@ -10,7 +10,7 @@
 </video>
 
 <section class="linesgradient vh100 flex flexcolumn flexcenter dbg" id="section1">
-	<?php include('logo.php'); ?>
+	<?php include('herologo.php'); ?>
 	<div class="container centered bounce-in-right delay3">
 		<h1>
 			<?php echo get_bloginfo( 'description' ); ?>
@@ -45,9 +45,9 @@
 					
 					<?php $hero = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' ); ?>
 					<div class="project hidden" style="background: url('<?php echo $hero['0'];?>')">
-						<!-- <div class="project--meta">
+						<div class="project--meta">
 							<p><?php the_title(); ?></p>
-						</div> -->
+						</div>
 					</div>
 					<?php endwhile; ?>
 			</div>
