@@ -34,10 +34,13 @@
     opacity: 1
     
 .downarrow
+  display: block
   width: 90px
   height: 90px
   position: relative
   animation: bounce-in-top 1.1s 3s both
+  &:hover > span
+    animation-play-state: paused
   span
     width: 80px
     height: 80px
