@@ -1,9 +1,10 @@
 body
   background-color: $offwhite
 .container
-  width: 980px
+  width: 768px
+  margin: 0 auto
   @media (max-width: $breakpoint-medium)
-    width: 640px
+    width: 546px
   @media (max-width: $breakpoint-small)
     width: 100%
 
@@ -20,13 +21,16 @@ body
 
 .hidden
   opacity: 0
+.hiddenleft
+  opacity: 0
+.hiddenright
+  opacity: 0
 
 section
   background-color: $cool-grey
   padding: 2em 0
   @media (max-width: $breakpoint-small)
     padding: 2em 0
-
   
 .vh50
   min-height: 50vh
@@ -35,6 +39,4 @@ section
 .vh100
   min-height: 100vh
 .vh150
-  min-height: 150vh
-
-  
+  min-height: 150vh  

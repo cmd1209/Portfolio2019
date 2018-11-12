@@ -18,7 +18,7 @@
 </section>
 
 <section class="vh100 flex flexcolumn flexcenter" id="section2">
-	<div class="container centered hidden" id="section2intro">
+	<div class="container centered" id="section2intro">
 			<?php the_content(); // Dynamic Content ?>
 	</div>
 </section>
@@ -40,7 +40,7 @@
 				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 					
 					<?php $hero = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' ); ?>
-					<div class="project hidden" style="background: url('<?php echo $hero['0'];?>')">
+					<div class="project hiddenright" style="background: url('<?php echo $hero['0'];?>')">
 						<div class="project--meta">
 							<p><?php the_title(); ?></p>
 						</div>

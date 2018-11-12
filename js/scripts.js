@@ -3,36 +3,49 @@
 	$(function () {
 		'use strict';
 
-		$('#section1').on('inview', function(event, isInView) {
-			if (isInView) {
-			  $('header.startheader').addClass('hidden');
-			  $('header.startheader').removeClass('slide-in-top');
+		// cache section2 div
+		var section1 = $("#section2");
+		// cache offset top when page loads
+		var section1offset = section1.offset().top;
+
+		$(window).scroll(function() {
+			var startheader = $(".startheader");
+
+			if( $(this).scrollTop() >= section1offset ) {
+				startheader.addClass('slide-in-top');
+				startheader.removeClass('hidden');
 			} else {
-				// element has gone out of viewport
-				$('header.startheader').addClass('slide-in-top');
-				$('header.startheader').removeClass('hidden');
+				startheader.addClass('hidden');
+				startheader.removeClass('slide-in-top');
 			}
 		});
 
+		$(window).resize( function() {
+			// get offset top again when resizing
+			section1offset = section1.offset().top;
+		});
 
-		$('#section2').one('inview', function(event, isInView) {
+
+
+		$('.hiddenleft').one('inview', function(event, isInView) {
 			if (isInView) {
-			  $('#section2intro').addClass('bounce-in-left');
-			  $('#section2intro').removeClass('hidden');
+			  $(this).addClass('bounce-in-left');
+			  $(this).removeClass('hiddenleft');
 			} else {
 				// element has gone out of viewport
-				$('#section2intro').removeClass('hidden');
+				$(this).removeClass('hiddenleft');
 			}
 		});
-		$('#section3').on('inview', function(event, isInView) {
+		$('.hiddenright').one('inview', function(event, isInView) {
 			if (isInView) {
-				$('#projectintro').addClass('bounce-in-right');
-			  	$('#projectintro').removeClass('hidden');
+			  $(this).addClass('bounce-in-right');
+			  $(this).removeClass('hiddenright');
 			} else {
 				// element has gone out of viewport
-				$('#projectintro').removeClass('hidden');
+				$(this).removeClass('hiddenright');
 			}
 		});
+
 
 		$('#section3').on('inview', function(event, isInView) {
 			if (isInView) {
@@ -55,10 +68,15 @@
 		});
 
 		$(document).on('click', '.activator', function () {
+
+			var startheaderlogo = $(".startheader-logo");
+			var activator = $(".activator");
+			var nav = $("nav.nav");
+
 			$(this).toggleClass('active');
-			$(".startheader-logo").toggleClass('startheaderleft');
-			$(".activator").toggleClass('slideoffleft');
-			$("nav.nav").toggleClass('offleft navnormleft');
+			startheaderlogo.toggleClass('startheaderleft');
+			activator.toggleClass('slideoffleft');
+			nav.toggleClass('offleft navnormleft');
 		});
 
 		// Select all links with hashes
