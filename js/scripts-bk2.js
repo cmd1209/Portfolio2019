@@ -27,63 +27,17 @@
 			navigation: true,
 	});
 
-	$('.bouncetop').one('inview', function(event, isInView) {
-		if (isInView) {
-			$(this).addClass('bounce-in-top');
-			$(this).removeClass('bouncetop');
-		} else {
-			// element has gone out of viewport
-			$(this).removeClass('bouncetop');
-		}
-	});
+	$('.revealcontent').children().addClass('stash');
 
-	$('.hiddentop').one('inview', function(event, isInView) {
+	$('.revealcontent').one('inview', function(event, isInView) {
 		if (isInView) {
-			$(this).addClass('slide-in-top');
-			$(this).removeClass('hiddenleft');
+			$(this).children().addClass('reveal');
+			$(this).children().removeClass('stash');
 		} else {
 			// element has gone out of viewport
-			$(this).removeClass('hiddenleft');
+			$(this).children().removeClass('stash');
 		}
 	});
-	$('.hiddenbottom').one('inview', function(event, isInView) {
-		if (isInView) {
-			$(this).addClass('slide-in-bottom');
-			$(this).removeClass('hiddenleft');
-		} else {
-			// element has gone out of viewport
-			$(this).removeClass('hiddenleft');
-		}
-	});
-	$('.hiddenleft').one('inview', function(event, isInView) {
-		if (isInView) {
-			$(this).addClass('slide-in-left');
-			$(this).removeClass('hiddenleft');
-		} else {
-			// element has gone out of viewport
-			$(this).removeClass('hiddenleft');
-		}
-	});
-	$('.hiddenright').one('inview', function(event, isInView) {
-		if (isInView) {
-			$(this).addClass('slide-in-right');
-			$(this).removeClass('hiddenright');
-		} else {
-			// element has gone out of viewport
-			$(this).removeClass('hiddenright');
-		}
-	});
-
-
-	$('#section4').on('inview', function(event, isInView) {
-		if (isInView) {
-			$('#topvid').fadeOut(1000);
-		} else {
-			// element has gone out of viewport
-			$('#topvid').fadeIn(1000);
-		}
-	});
-
 
 
 		$(document).on('click', '.activator', function () {
@@ -97,8 +51,6 @@
 			activator.toggleClass('slideoffleft');
 			nav.toggleClass('offleft navnormleft');
 		});
-
-
 
 		// Select all links with hashes
 $('a[href*="#"]')

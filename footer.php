@@ -1,5 +1,5 @@
 			<!-- footer -->
-			<footer class="footer dbg" role="contentinfo">
+			<footer class="footer textlight" role="contentinfo">
 				<div class="mw60">
 				<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
 				</div>
@@ -14,6 +14,7 @@
 
 		<?php wp_footer(); ?>
 		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/lib/jquery.inview.min.js" ></script>
+		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/lib/owl.carousel.min.js" ></script>
 		<!-- analytics -->
 		<!-- <script>
 		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){

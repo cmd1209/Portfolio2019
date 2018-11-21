@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide|Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Exo+2:400,700');
 html {
 	font-size: 100%;
 }
 body{
-  font-family: 'Lato', sans-serif, arial, sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 1rem;
 }
 a{
@@ -29,12 +30,13 @@ a.btn{
   font-size: 0.88rem;
 }
 em{
-  background-color: rgba($lightblue, 0.75);
+  background-color: rgba($lightblue, 0.35);
   padding: 0 2px;
   font-style: normal;
 }
 p{
-  line-height: 1.62rem;
+  font-size: 100%;
+  line-height: 1.6rem;
   font-weight: 400;
 }
 h1, h2, h3, h4, h5, h6{
@@ -42,6 +44,7 @@ h1, h2, h3, h4, h5, h6{
   font-weight: 400;
 }
 .centered{
+  text-align: center;
   h1,h2,h3,h4,h5,h6{
     text-align: center;
   }
@@ -52,5 +55,35 @@ h1{
   @media (max-width: $breakpoint-small){
     font-size: 2rem;
     line-height: 2.8rem;
+  }
+}
+.red{
+  color: $secondary-color;
+}
+.blue{
+  color: $primary-color;
+}
+.quote{
+  display: inline!important;
+  line-height: 62px!important;
+  color: $offwhite!important;
+  background-color: rgba($primary-color,0.45)!important;
+  padding: 0px 4px!important;
+}
+.wp-block-button__link{
+  border-radius: $brad!important;
+  font-size: 100%!important;
+  font-weight: 400!important;
+  margin: 1em 0!important;
+  padding: 0.5em 1em!important;
+  background-color: $secondary-color!important;
+  border: 1px solid $secondary-color!important;
+  transition: all 0.2s ease-in-out;
+  color: $offwhite!important;
+  &:hover{
+    background-color: $primary-color!important;
+  border: 1px solid $primary-color!important;
+    color: $offwhite!important;
+    transition: all 0.2s ease-in-out;
   }
 }

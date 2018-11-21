@@ -6,7 +6,10 @@
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
-        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
+		<link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
+		
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/owl/owl.carousel.min.css">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/owl/owl.theme.default.min.css">
 		
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +29,8 @@
 				</script>
 	</head>
 	<body <?php body_class(); ?>>
-	<header class="startheader hidden flex flexrow clear" role="banner">
+	<header class="startheader" role="banner">
+		<div class="container overflow flex flexrow clear">
 						<a href="<?php echo home_url(); ?>">
 						<svg class="startheader-logo" width="303px" height="99px" viewBox="0 0 303 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     							<title>CMd</title>
@@ -48,5 +52,5 @@
       <nav class="nav offleft" role="navigation">
 		<?php html5blank_nav(); ?>
 	</nav>
-
+	</div>
 	</header>

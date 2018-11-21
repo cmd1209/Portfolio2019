@@ -1,11 +1,15 @@
 body
-  background-color: $offwhite
+  overscroll-behavior-y: none
+
 .container
   width: 768px
   margin: 0 auto
+  padding: 0
   @media (max-width: $breakpoint-medium)
+    padding: 0 1em
     width: 546px
   @media (max-width: $breakpoint-small)
+    padding: 0 1em
     width: 100%
 
 .flex
@@ -19,24 +23,69 @@ body
   align-items: center
   justify-content: center
 
-.hidden
+.grid
+  display: grid
+  width: 100%
+  grid-column-gap: 0
+  grid-row-gap: 0
+  @media (max-width: $breakpoint-small)
+  &--2col
+    grid-template-columns: 1fr 1fr
+    @media (max-width: $breakpoint-medium)
+        grid-template-columns: 1fr 1fr
+    @media (max-width: $breakpoint-small)
+        grid-template-columns: 1fr
+  &--3col
+    grid-template-columns: 1fr 1fr 1fr
+    @media (max-width: $breakpoint-medium)
+        grid-template-columns: 1fr 1fr
+    @media (max-width: $breakpoint-small)
+        grid-template-columns: 1fr
+
+.hidden, .hiddentop, .hiddenleft, .hiddenbottom, .hiddenright, .slidetop, .slideright, .slidebottom, .slideleft, .bouncetop
   opacity: 0
-.hiddenleft
-  opacity: 0
-.hiddenright
-  opacity: 0
+  
+.pskinny > p
+  padding: 0 4em
+  @media (max-width: $breakpoint-small)
+    padding: 0
+
+
+.padded-1em
+  padding: 1em
+.padded-2em
+  padding: 2em
 
 section
+  overflow: hidden
   background-color: $cool-grey
-  padding: 2em 0
-  @media (max-width: $breakpoint-small)
-    padding: 2em 0
-  
+
+.textwrap
+  padding: 4em 0
+
 .vh50
   min-height: 50vh
 .vh75
   min-height: 75vh
 .vh100
   min-height: 100vh
+  padding: 3em 0
 .vh150
   min-height: 150vh  
+  padding: 3em 0
+
+.overflow
+  overflow: hidden
+
+.stash
+  opacity: 0
+  transition: all 1s ease-in-out
+
+.reveal
+  opacity: 1
+  transition: all 1s ease-in-out
+
+.revealcontent
+  @for $i from 1 to 5
+    p:nth-child(#{$i})
+      transition-delay: $i * 0.5s
