@@ -3,18 +3,6 @@
 	$(function () {
 		'use strict';
 
-		var startheader = $(".startheader");
-
-		startheader.hide();
-    $(window).scroll(function() {
-        if ($(document).scrollTop() > 400) {
-            startheader.fadeIn('slow');
-        }
-        else {
-            startheader.fadeOut('slow');
-        }
-    });
-
 
 		$('.owl-carousel').owlCarousel({
 			items:1,
@@ -75,27 +63,11 @@
 	});
 
 
-	$('#section4').on('inview', function(event, isInView) {
-		if (isInView) {
-			$('#topvid').fadeOut(1000);
-		} else {
-			// element has gone out of viewport
-			$('#topvid').fadeIn(1000);
-		}
-	});
 
-
-
-		$(document).on('click', '.activator', function () {
-
-			var startheaderlogo = $(".startheader-logo");
-			var activator = $(".activator");
-			var nav = $("nav.nav");
-
+		$(document).on('click', '.activator, .menu-item', function () {
 			$(this).toggleClass('active');
-			startheaderlogo.toggleClass('startheaderleft');
-			activator.toggleClass('slideoffleft');
-			nav.toggleClass('offleft navnormleft');
+			$('.overlay').fadeToggle("fast");
+			$('.nav').toggleClass('navactive navhidden');
 		});
 
 

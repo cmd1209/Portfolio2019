@@ -1,13 +1,10 @@
 <?php /* Template Name: start*/ ?>
 <?php get_header(); ?>
 
-<video poster="https://chadmdanford.com/wp-content/uploads/2018/11/shadowwork-poster.jpg" id="bottomvid" playsinline autoplay muted loop>
-  <source src="https://chadmdanford.com/wp-content/uploads/2018/11/workshadows.mp4" type="video/mp4">
+<video poster="https://chadmdanford.com/wp-content/uploads/2018/11/filmsposter.jpg" id="topvid" playsinline autoplay muted loop>
+  <source src="https://chadmdanford.com/wp-content/uploads/2018/11/Backgrounfilms5.mp4" type="video/mp4">
 </video>  
 
-<video poster="https://chadmdanford.com/wp-content/uploads/2018/11/elbebridge-poster.jpg" id="topvid" playsinline autoplay muted loop>
-  <source src="https://chadmdanford.com/wp-content/uploads/2018/11/Elbbridge02.mp4" type="video/mp4">
-</video>
 
 <section class="linesgradient vh100 flex flexcolumn flexcenter textlight" id="section1">
 	<?php include('herologo.php'); ?>
@@ -25,7 +22,7 @@
 </section>
 
 <section class="vh100 textlight darkback" id="section3">
-<div class="container">
+<div class="container project-header centered">
 	<h1>Recent Work</h1>
 </div>
 			
@@ -61,7 +58,6 @@
 <section class="vh100 textlight linesgradient flex flexcolumn flexcenter" id="section4">
 	<div class="container centered">
 		<h1>Key Talents</h1>
-
 	</div>
 </section>
 <?php get_footer(); ?>

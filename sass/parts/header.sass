@@ -22,46 +22,72 @@ header.startheader
   opacity: 0
   transition: all 0.3s ease-in-out
 
-
 .slideoffleft
   transform: translateX(-80px)
   transition: all 0.3s ease-in-out
 
 nav.nav
+  text-align: center
+  position: fixed
+  left: 50%
+  top: 50%
+  z-index: 999
   transition: all 0.3s ease-in-out
   ul
-    display: inline
     margin: 0
     padding: 0
   li
-    display: inline-block
     list-style: none
     margin: 5px 7px
   a
     display: block
     color: $cool-grey
-    font-size: 85%
+    font-size: 150%
     &:hover
       color: $lightblue
-  
-.offleft
-  transform: translateX(-350px)
+
+.navhidden
+  transform: translate(-50%,-350px)
   opacity: 0
   transition: all 0.3s ease-in-out
+
+.navactive
+  transform: translate(-50%,-50%)
+  opacity: 1
+  transition: all 0.3s ease-in-out
+
+.overlay
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($darkblue, 0.95)
+  z-index: 998
+
 .navnormleft
   transform: translateX(-80px)
 
 .activator
-  cursor: pointer
-  border-radius: 100%
   display: flex
-  align-items: center
+  flex-direction: column
   justify-content: center
-  margin: 0 5px
-  z-index: 1
+  align-items: center
+  cursor: pointer
+  width: 45px
+  height: 45px
+  position: fixed
+  top: 0
+  left: 0
+  border-radius: $brad
+  z-index: 999
   transition: all 0.3s ease-in-out
   &:hover
-
+    background-color: rgba($lightblue,0.3)
+    transition: all 0.3s ease-in-out
 
 .toggle-btn
   border-radius: 5px
@@ -69,8 +95,6 @@ nav.nav
   width: 25px
   background-color: $cool-grey
   position: relative
-  top: 50%
-  left: 0
   margin: auto
   transition: all 0.3s ease-in-out
   &:before
@@ -81,7 +105,7 @@ nav.nav
     box-shadow: 0 -9px 0 0 $cool-grey
     position: absolute
     top: 0
-    left: 0
+    left: -3px
     transition: all 0.3s ease-in-out
     transform: translate(3px)
   &:after
@@ -92,10 +116,10 @@ nav.nav
     box-shadow: 0 9px 0 0 $cool-grey
     position: absolute
     top: 0
-    left: 0
+    left: 3px
     transition: all 0.3s ease-in-out
     transform: translate(-3px)
-    
+
     
 .active
   .toggle-btn 

@@ -1,5 +1,5 @@
 			<!-- footer -->
-			<footer class="footer textlight" role="contentinfo">
+			<footer class="footer textlight" role="contentinfo" id="contact">
 				<div class="mw60">
 				<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
 				</div>
