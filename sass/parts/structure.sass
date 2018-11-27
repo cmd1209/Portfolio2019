@@ -2,14 +2,14 @@ body
   overscroll-behavior-y: none
 
 .container
-  width: 768px
+  width: 780px
   margin: 0 auto
   padding: 0
   @media (max-width: $breakpoint-medium)
     padding: 0 1em
-    width: 546px
+    width: 540px
   @media (max-width: $breakpoint-small)
-    padding: 0 1em
+    padding: 0 2em
     width: 100%
 
 .flex
@@ -26,8 +26,8 @@ body
 .grid
   display: grid
   width: 100%
-  grid-column-gap: 0
-  grid-row-gap: 0
+  grid-column-gap: 1em
+  grid-row-gap: 1em
   @media (max-width: $breakpoint-small)
   &--2col
     grid-template-columns: 1fr 1fr
@@ -45,20 +45,15 @@ body
 .hidden, .hiddentop, .hiddenleft, .hiddenbottom, .hiddenright, .slidetop, .slideright, .slidebottom, .slideleft, .bouncetop
   opacity: 0
   
-.pskinny > p
-  padding: 0 4em
-  @media (max-width: $breakpoint-small)
-    padding: 0
-
-
 .padded-1em
   padding: 1em
 .padded-2em
   padding: 2em
-.portrait
-  @media (max-width: $breakpoint-small)
-    width: 250px
-    height: 250px
+
+.portraithero
+  background: $awesome-lines, $transparent-light-gradient, url('https://chadmdanford.com/wp-content/uploads/2018/11/portrait-background.jpg') no-repeat right bottom
+  background-size: cover
+  background-attachment: fixed
 
 section
   overflow: hidden
@@ -80,16 +75,3 @@ section
 
 .overflow
   overflow: hidden
-
-.stash
-  opacity: 0
-  transition: all 1s ease-in-out
-
-.reveal
-  opacity: 1
-  transition: all 1s ease-in-out
-
-.revealcontent
-  @for $i from 1 to 5
-    p:nth-child(#{$i})
-      transition-delay: $i * 0.5s

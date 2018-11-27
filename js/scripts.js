@@ -64,9 +64,9 @@
 
 
 
-		$(document).on('click', '.activator, .menu-item', function () {
+		$(document).on('click', '#nav-icon, .menu-item', function () {
 
-			$('.activator').toggleClass('active');
+			$('#nav-icon').toggleClass('open');
 			$('.overlay').fadeToggle("fast");
 			$('.nav').toggleClass('navactive navhidden');
 		});

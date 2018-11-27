@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Audiowide|Lato:400,700');
-@import url('https://fonts.googleapis.com/css?family=Exo+2:400,700');
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+@import url('https://fonts.googleapis.com/css?family=Exo+2:400,400i,600,600i');
 html {
 	font-size: 100%;
 }
@@ -9,7 +9,7 @@ body{
 }
 a{
   color: $secondary-color;
-  font-weight: 700;
+  font-weight: 600;
   &:hover{
     color: $primary-color;
   }
@@ -48,6 +48,11 @@ h1, h2, h3, h4, h5, h6{
   h1,h2,h3,h4,h5,h6{
     text-align: center;
   }
+}
+.german{
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }
 h1{
   font-size: 2.8rem;

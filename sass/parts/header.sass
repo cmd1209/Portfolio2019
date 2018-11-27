@@ -42,19 +42,34 @@ nav.nav
   a
     display: block
     color: $cool-grey
-    font-size: 150%
+    font-size: 185%
+    line-height: 150%
+    font-weight: 400 
     &:hover
       color: $lightblue
 
+
 .navhidden
-  transform: translate(-50%,-350px)
+  transform: translate(-50%,-750px)
   opacity: 0
-  transition: all 0.3s ease-in-out
+  transition: all 0.15s ease-in-out
+  ul li a
+    opacity: 0
+    transform: translate(0,-350px)
+    transition: all 0.3s ease-in-out
 
 .navactive
   transform: translate(-50%,-50%)
   opacity: 1
-  transition: all 0.3s ease-in-out
+  transition: all 0.15s ease-in-out
+  ul li a
+    opacity: 1
+    transform: translate(0,0)
+    transition: all 0.3s ease-in-out
+
+@for $i from 1 to 9
+  .nav ul li:nth-of-type(#{$i}) > a
+    transition-delay: $i * 0.1s
 
 .overlay
   display: none
@@ -65,81 +80,57 @@ nav.nav
   right: 0
   width: 100%
   height: 100%
-  background-color: rgba($darkblue, 0.95)
+  background: $awesome-lines
+  background-color: $darkblue
   z-index: 998
 
-.navnormleft
-  transform: translateX(-80px)
-
-.activator
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  cursor: pointer
-  width: 45px
-  height: 45px
-  position: fixed
-  top: 0
-  left: 0
-  border-radius: $brad
+#nav-icon
+  width: 38px
   z-index: 999
-  transition: all 0.3s ease-in-out
-  &:hover
-    background-color: rgba($lightblue,0.3)
-    transition: all 0.3s ease-in-out
+  height: 36px
+  position: fixed
+  top: 50%
+  left: 4px
+  transform: rotate(0deg) translateY(-50%)
+  transition: .5s ease-in-out
+  cursor: pointer
+  @media (max-width: $breakpoint-small)
+    width: 30px
+    left: 0px
 
-.toggle-btn
-  border-radius: 5px
+#nav-icon span
+  display: block
+  position: absolute
   height: 3px
-  width: 25px
-  background-color: $cool-grey
-  position: relative
-  margin: auto
-  transition: all 0.3s ease-in-out
-  &:before
-    content: ""
-    border-radius: 5px
-    height: 3px
-    width: 25px
-    box-shadow: 0 -9px 0 0 $cool-grey
-    position: absolute
-    top: 0
-    left: -3px
-    transition: all 0.3s ease-in-out
-    transform: translate(3px)
-  &:after
-    border-radius: 5px
-    content: ""
-    height: 3px
-    width: 25px
-    box-shadow: 0 9px 0 0 $cool-grey
-    position: absolute
-    top: 0
-    left: 3px
-    transition: all 0.3s ease-in-out
-    transform: translate(-3px)
+  width: 100%
+  background: $offwhite
+  border-radius: 8px
+  opacity: 1
+  left: 0
+  transform: rotate(0deg)
+  transition: .25s ease-in-out
 
-    
-.active
-  .toggle-btn 
-    background-color: transparent
-    transition: all 0.2s ease-in-out
-    &:before
-      top: 0
-      transition: all 0.3s ease-in-out
-    &:after
-      top: 0
-      transition: all 0.3s ease-in-out
+#nav-icon span:nth-child(1)
+  top: 0px
 
-.active
-  &:hover
-  .hamburger
-    background-color: $cool-grey
-    transform: rotate(45deg)
-    &:before
-      box-shadow: 0 0 0 0 $cool-grey
-    &:after
-      left: -10px
-      box-shadow: 0 -10px 0 0 $cool-grey
-      transform: translateY(0) rotate(90deg) 
+#nav-icon span:nth-child(2),#nav-icon span:nth-child(3)
+  top: 12px
+
+#nav-icon span:nth-child(4) 
+  top: 24px
+
+#nav-icon.open span:nth-child(1) 
+  top: 12px
+  width: 0%
+  left: 50%
+
+#nav-icon.open span:nth-child(2) 
+  transform: rotate(45deg)
+
+#nav-icon.open span:nth-child(3) 
+  transform: rotate(-45deg)
+
+#nav-icon.open span:nth-child(4) 
+  top: 12px
+  width: 0%
+  left: 50%

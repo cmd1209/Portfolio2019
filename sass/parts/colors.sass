@@ -11,8 +11,10 @@ $offwhite: rgb(245,247,249)
 $awesome-lines: repeating-linear-gradient( 45deg, rgba(white, 0), rgba(white, 0) 3px, rgba(white, 0.05) 3px, rgba(white, 0.05) 6px)
 $dark-gradient: linear-gradient(180deg, $close-to-black,black 100%)
 $awesome-gradient: linear-gradient(180deg, $primary-color 0%,$secondary-color 100%)
+$reverse-gradient: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%)
 $dark-awesome-gradient: linear-gradient(180deg, rgba(36, 68, 98, 0.8) 0% ,$secondary-color 100%)
 $transparent-gradient: linear-gradient(180deg, $primary-color 0% , rgba($secondary-color,0.75) 100%)
+$transparent-light-gradient: linear-gradient(180deg, $offwhite 0% , rgba($cool-grey,0.75) 100%)
 $light-awesome-gradient: linear-gradient(180deg, $offwhite 0%,$cool-grey 100%)
 $darker-gradient: linear-gradient(180deg, $primary-color 0% ,darken($primary-color, 25) 66%)
 
@@ -22,23 +24,12 @@ $darker-gradient: linear-gradient(180deg, $primary-color 0% ,darken($primary-col
   background: $awesome-lines, $light-awesome-gradient
 .linesgradient
   background: $awesome-lines, $transparent-gradient
-.motionbackground01
-  background: $awesome-lines, $transparent-gradient, url(https://chadmdanford.com/wp-content/uploads/2018/10/Liberty-Pop-Menutest.gif) no-repeat center center
-  background-size: cover
-  background-attachment: fixed
-.motionbackground02
-  background: $awesome-lines, $transparent-gradient, url(https://chadmdanford.com/wp-content/uploads/2018/10/Liberty-Pop-Menutest2.gif) no-repeat center center
-  background-size: cover
-  background-attachment: fixed
+.reversegradient
+  background: $awesome-lines, $reverse-gradient
 .textlight
   color: $offwhite
 .textdark
   color: $close-to-black
 .darkback
   background-color: $close-to-black
-.portraitback
-  background: $awesome-lines, url(https://chadmdanford.com/wp-content/uploads/2018/11/portrait-sw2014.jpg) no-repeat right center
-  background-size: cover
-  background-attachment: fixed
 
-  

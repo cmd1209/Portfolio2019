@@ -31,9 +31,12 @@
 	<body <?php body_class(); ?>>
 	<div class="overlay">
 	</div>
-		<div class="activator">
-			<div class="toggle-btn hamburger"></div>
-		</div>
-		<nav class="nav navhidden" role="navigation">
-			<?php html5blank_nav(); ?>
-		</nav>			
+	<div id="nav-icon">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<nav class="nav navhidden" role="navigation">
+		<?php html5blank_nav(); ?>
+	</nav>			
