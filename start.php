@@ -22,26 +22,23 @@
 
 <section class="vh100 reversegradient textlight" id="section3">
 <div class="container centered">
-	<h1>Recent Work</h1>
-			
+	<h1 id="work">Recent Work</h1>
 		<?php // the query
-			$the_query = new WP_Query( 'post_type=post&cat=5'); ?>
+			$the_query = new WP_Query( 'post_type=post'); ?>
 			<?php if ( $the_query->have_posts() ) : ?>
-			<!-- pagination here -->
-			<!-- the loop -->
-			<!-- <div class="textwrap hidden" id="projectintro">
-				<h2>Recent Projects</h2>
-				<p>I've had the pleasure of working on many wonderful web projects of the past decade or so.</p>
-			</div> -->
+	
+
 			<div class="grid grid--3col" id="projectgrid">
 				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 					
 					<?php $hero = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' ); ?>
-					<div class="project hiddenbottom" style="background: url('<?php echo $hero['0'];?>')">
+
+					<a href="<?php the_permalink(); ?>" class="project hiddenbottom" style="background: url('<?php echo $hero['0'];?>')">
 						<div class="project--meta">
-							<p><?php the_title(); ?></p>
+							<h4><?php the_title(); ?></h4>
+							<p>yeah yeah yeah</p>
 						</div>
-					</div>
+					</a>
 					<?php endwhile; ?>
 			</div>
 

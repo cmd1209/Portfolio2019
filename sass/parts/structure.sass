@@ -2,14 +2,14 @@ body
   overscroll-behavior-y: none
 
 .container
-  width: 780px
+  max-width: 780px
   margin: 0 auto
   padding: 0
   @media (max-width: $breakpoint-medium)
-    padding: 0 1em
-    width: 540px
+    padding: 0 4em
+    width: 100%
   @media (max-width: $breakpoint-small)
-    padding: 0 2em
+    padding: 0 1em
     width: 100%
 
 .flex
@@ -64,14 +64,19 @@ section
 
 .vh50
   min-height: 50vh
+  transition: all 0.45s ease-in-out
 .vh75
   min-height: 75vh
+  transition: all 0.45s ease-in-out
 .vh100
   min-height: 100vh
   padding: 3em 0
+  transition: all 0.45s ease-in-out
 .vh150
   min-height: 150vh  
   padding: 3em 0
+  transition: all 0.45s ease-in-out
 
 .overflow
   overflow: hidden
+

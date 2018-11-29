@@ -1,27 +1,28 @@
+
 .project
   overflow: hidden
   padding: 0.5em
-  height: 300px
+  height: 250px
   background-size: cover!important
   background-repeat: no-repeat!important
   background-color: grey
-  border-radius: $brad
   position: relative
   @media (max-width: $breakpoint-medium)
-      height: 300px
+      height: 225px
   @media (max-width: $breakpoint-small)
-      height: 275px
+      height: 250px
   &:hover > .project--meta
+      opacity: 1
       transform: translate(0,0)
-      transition: transform 0.125s ease-in-out
-  &:hover > .project--meta > p
+      transition: all 0.35s ease-in-out
+  &:hover > .project--meta > h4
       transform: translate(0,0)
-      transition: transform 0.35s ease-in-out
+      transition: all 0.35s ease-in-out
   &--meta
     position: absolute
     width: 100%
     height: 100%
-    background-color: rgba(black,0.9)
+    background-color: rgba($darkestblue,0.9)
     top: 0
     left: 0
     right: 0
@@ -30,17 +31,22 @@
     display: flex
     flex-direction: column
     justify-content: center
-    transform: translate(100%, 0)
-    transition: transform 0.125s ease-in-out
-    p
-        color: $offwhite
-        font-size: 85%
+    opacity: 0
+    transform: translate(0,0)
+    transition: all 0.35s ease-in-out
+    @media (max-width: $breakpoint-medium)
+        opacity: 1
+    h3,h4,h5,h6
+        color: $lightblue
         margin: 0
-        transform: translate(100%, 0)
-        transition: transform 0.35s ease-in-out
+        transform: translate(0, 25%)
+        transition: all 0.35s ease-in-out
+    p
+        margin: 0.5em 0 0 0
+        color: $cool-grey
 
 @for $i from 1 to 9
   .project:nth-of-type(#{$i})
-    animation-delay: $i * 0.25s
-.project-header
-    padding: 4em 0
+    animation-delay: $i * 0.05s
+#work
+    margin: 0 0 1.5em 0

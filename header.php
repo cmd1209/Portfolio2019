@@ -18,6 +18,14 @@
 		<?php wp_head(); ?>
 		<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-86871910-1', 'auto');
+  ga('send', 'pageview');
+  </script>
 
 			<script>
 			// conditionizr.com
@@ -38,5 +46,9 @@
 		<span></span>
 	</div>
 	<nav class="nav navhidden" role="navigation">
-		<?php html5blank_nav(); ?>
+		<?php if( is_front_page()) { ?>
+			<?php wp_nav_menu( array('menu' => 'main' )); ?>
+		<?php } else { ?>
+			<?php wp_nav_menu( array('menu' => 'second' )); ?>
+		<?php } ?>
 	</nav>			
