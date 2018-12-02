@@ -1,5 +1,66 @@
 footer.footer
   background: $awesome-lines
   background-color: $darkblue
-  padding: 2em
+  padding: 3em 0
   min-height: 50vh
+
+.wpforms-field-row
+  display: flex
+  margin-right: 4em
+
+.wpforms-field-container
+  margin: 1em 0
+
+.wpforms-field
+  position: relative
+  padding: 1em 0
+  input, textarea
+    width: 85%
+    background: none
+    color: lighten(grey,40%)
+    padding: 10px 22px 
+    font-size: 16px
+    display: inline
+    &:focus,
+    &active
+      outline: none
+    &[type="text"],
+    &[type="email"]
+      border: none
+      border-bottom: solid 2px darken(grey,20%)
+      border-left: solid 2px darken(grey,20%)
+      border-radius: 0
+    &[type="submit"]
+      background-color: darken(grey,15%)
+      border: none
+      border-radius: 0
+      margin: 1em 0
+      box-shadow: 0 4px 8px -3px darken(grey,50%)
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1)
+      &:hover, &:focus
+        background-color: darken(grey,30%)
+        box-shadow: 0 10px 12px -5px darken(grey,40%)
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1)  
+
+
+
+
+  label
+    position: absolute
+    top: -10px
+    left: 0
+    color: darken(grey,10%)
+    pointer-events: none
+button
+  background-color: $secondary-color
+  border-radius: $brad
+  color: $offwhite
+  padding: 9px 14px
+  border: none
+  &:hover
+    background-color: darken($secondary-color, 5)
+
+.wpforms-field-hp
+  display: none
+.wpforms-error
+  background-color: rgba($secondary-color,0.75)!important

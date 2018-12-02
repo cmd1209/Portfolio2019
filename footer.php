@@ -1,14 +1,13 @@
 			<!-- footer -->
 			<footer class="footer textlight" role="contentinfo" id="contact">
-				<div class="mw60">
+				<div class="container">
 				<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
 				</div>
-				<!-- copyright -->
+				<div class="container centered">
 				<p class="copyright">
 					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>.
 				</p>
-				<!-- /copyright -->
-
+				</div>
 			</footer>
 			<!-- /footer -->
 

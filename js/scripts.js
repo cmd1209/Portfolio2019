@@ -63,7 +63,6 @@
 	});
 
 
-
 		$(document).on('click', '#nav-icon, .menu-item', function () {
 
 			$('#nav-icon').toggleClass('open');
