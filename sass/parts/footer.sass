@@ -9,32 +9,34 @@ footer.footer
   margin-right: 4em
 
 .wpforms-field-container
-  margin: 1em 0
-
+  margin: 1em 0 0.5em 0
+  
 .wpforms-field
   position: relative
   padding: 1em 0
   input, textarea
-    width: 85%
+    width: 100%
     background: none
     color: lighten(grey,40%)
     padding: 10px 22px 
     font-size: 16px
     display: inline
+    border: solid 2px darken(grey,20%)
+    background-color: $primary-color
     &:focus,
     &active
       outline: none
+      background: $close-to-black
     &[type="text"],
-    &[type="email"]
+    &[type="email"],
       border: none
-      border-bottom: solid 2px darken(grey,20%)
-      border-left: solid 2px darken(grey,20%)
+      border: solid 2px darken(grey,20%)
       border-radius: 0
     &[type="submit"]
       background-color: darken(grey,15%)
       border: none
       border-radius: 0
-      margin: 1em 0
+      margin: 0.5em 0
       box-shadow: 0 4px 8px -3px darken(grey,50%)
       transition: all 0.3s cubic-bezier(.25,.8,.25,1)
       &:hover, &:focus
@@ -64,3 +66,22 @@ button
   display: none
 .wpforms-error
   background-color: rgba($secondary-color,0.75)!important
+
+
+  
+
+.simple-social-icons
+  display: flex
+  @media (max-width: $breakpoint-medium)
+    justify-content: center
+  a
+    color: $cool-grey
+    border-radius: 100%
+    padding: 1em
+    &:hover
+      color: $secondary-color
+  svg, svg[class^="social-"]
+    width: 2em!important
+    height: 2em!important
+.copyright
+  margin: 2em 0 

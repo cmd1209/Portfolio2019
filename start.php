@@ -30,13 +30,22 @@
 
 			<div class="grid grid--3col" id="projectgrid">
 				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					
+				<?php
+            $category_array = wp_get_post_categories($post->ID);
+            $category_list = array();
+            foreach ( $category_array as $categories ) {
+                $category_list[] = get_cat_name( $categories );
+            }
+            $lister = implode(' | ', $category_list);
+            $list_categories = $lister;
+
+    ?>
 					<?php $hero = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' ); ?>
 
 					<a href="<?php the_permalink(); ?>" class="project hiddenbottom" style="background: url('<?php echo $hero['0'];?>')">
 						<div class="project--meta">
 							<h4><?php the_title(); ?></h4>
-							<p>yeah yeah yeah</p>
+							<p class="caption"><?php echo $list_categories; // THIS WORKS ?></p>
 						</div>
 					</a>
 					<?php endwhile; ?>
