@@ -3,13 +3,16 @@
   overflow: hidden
   padding: 0.5em
   height: 250px
+  border-radius: $brad
   background-size: cover!important
   background-repeat: no-repeat!important
   background-color: grey
   position: relative
   @media (max-width: $breakpoint-medium)
+      grid-column: span 1
       height: 225px
   @media (max-width: $breakpoint-small)
+      grid-column: span 1
       height: 250px
   &:hover > .project--meta
       opacity: 1
