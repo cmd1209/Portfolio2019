@@ -6,15 +6,13 @@
 </video>  
 
 <section class="linesgradient vh100 flex flexcolumn flexcenter textlight">
-	<div class="container centered">
+	<div class="container centered textlight">
 			<h1><?php the_title(); ?></h1>
-			<h3><?php the_category(' | '); // Separated by vertical line ?></h3>
+			<h3 class="category"><?php the_category(' | '); // Separated by vertical line ?></h3>
 	</div>
 </section>
-
-<section class=" flex flexcolumn flexcenter vh100 reversegradient textlight">
-	<div class="container centered">
-		<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+<section class="portraithero vh100">
+	<div class="container centered pullup portraithero">
 		<?php the_content(); // Dynamic Content ?>
 	</div>
 </section>
@@ -22,4 +20,5 @@
 <?php endwhile; ?>
 <?php else: ?>
 <?php endif; ?>
+
 <?php get_footer(); ?>
