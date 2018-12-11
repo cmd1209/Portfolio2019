@@ -61,8 +61,17 @@
 			</div>
 </section>
 <section class="vh100 textlight linesgradient flex flexcolumn flexcenter" id="section4">
-	<div class="container centered">
-		<h1>Key Talents</h1>
-	</div>
+<div class="container centered">
+<h1 id="skills">Skills & Talents</h1>
+				<?php 
+					$id=540; 
+					$post = get_post($id); 
+					$content = apply_filters('the_content', $post->post_content); 
+					echo $content;  
+				?>
+
+
+				</div>
+
 </section>
 <?php get_footer(); ?>
