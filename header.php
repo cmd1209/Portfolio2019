@@ -39,16 +39,21 @@
 	<body <?php body_class(); ?>>
 	<div class="overlay">
 	</div>
-	<div id="nav-icon">
+<?php if( is_front_page()) { ?>
+	<div id="nav-icon" class="burger">
 		<span></span>
 		<span></span>
 		<span></span>
 		<span></span>
 	</div>
 	<nav class="nav navhidden" role="navigation">
-		<?php if( is_front_page()) { ?>
 			<?php wp_nav_menu( array('menu' => 'main' )); ?>
-		<?php } else { ?>
-			<?php wp_nav_menu( array('menu' => 'second' )); ?>
-		<?php } ?>
 	</nav>			
+<?php } else { ?>
+	<div id="nav-icon" class="back">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+<?php } ?>

@@ -63,11 +63,14 @@
 	});
 
 
-		$(document).on('click', '#nav-icon, .menu-item', function () {
-
-			$('#nav-icon').toggleClass('open');
+		$(document).on('click', '.burger, .menu-item', function () {
+			$('.burger').toggleClass('open');
 			$('.overlay').fadeToggle("fast");
 			$('.nav').toggleClass('navactive navhidden');
+		});
+
+		$(document).on('click', '.back', function () {
+			window.history.back();
 		});
 
 
