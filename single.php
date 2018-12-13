@@ -5,15 +5,13 @@
   <source src="<?php the_field( 'hero_background_video' ); ?>" type="video/mp4">
 </video>  
 
-<section class="linesgradient vh100 flex flexcolumn flexcenter textlight">
-	<div class="container centered textlight">
-			<h1><?php the_title(); ?></h1>
-			<h3 class="category"><?php the_category(' | '); // Separated by vertical line ?></h3>
+<section class="linesgradient vh100 textlight">
+	<div class="container centered top20">
+		<h1><?php the_title(); ?></h1>
+		<h3 class="category"><?php the_category(' | '); // Separated by vertical line ?></h3>
 	</div>
-</section>
-<section class="portraithero vh100">
-	<div class="container centered pullup portraithero">
-		<?php the_content(); // Dynamic Content ?>
+	<div class="container centered top10">
+	<?php the_content(); // Dynamic Content ?>
 	</div>
 </section>
 

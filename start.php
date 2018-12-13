@@ -40,7 +40,7 @@
             $list_categories = $lister;
 
     ?>
-					<?php $hero = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' ); ?>
+					<?php $hero = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); ?>
 
 					<a href="<?php the_permalink(); ?>" class="project hiddenbottom" style="background: url('<?php echo $hero['0'];?>')">
 						<div class="project--meta">
