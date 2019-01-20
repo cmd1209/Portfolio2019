@@ -6,7 +6,7 @@
 </video>  
 
 <section class="linesgradient vh100 textlight">
-	<div class="container centered top20">
+	<div class="container centered top10">
 		<h1><?php the_title(); ?></h1>
 		<h3 class="category"><?php the_category(' | '); // Separated by vertical line ?></h3>
 	</div>

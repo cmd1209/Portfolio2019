@@ -70,7 +70,7 @@
 		});
 
 		$(document).on('click', '.back', function () {
-			window.history.back();
+			$(location).attr('href', 'https://www.chadmdanford.com/#work');
 		});
 
 

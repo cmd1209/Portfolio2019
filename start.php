@@ -5,7 +5,7 @@
   <source src="https://chadmdanford.com/wp-content/uploads/2018/11/Backgrounfilms5s.mp4" type="video/mp4">
 </video>  
 
-<section class="linesgradient vh100 flex flexcolumn flexcenter textlight" id="section1">
+<section class="linesgradient vh100 flex flexcolumn flexcenter textlight" id="hero">
 	<?php include('herologo.php'); ?>
 	<div class="container centered bounce-in-right delay3">
 		<h1><?php echo get_bloginfo( 'name' ); ?></h1>
@@ -14,13 +14,13 @@
 	<a href="#section2" class="downarrow"><span></span></a>
 </section>
 
-<section class="portraithero vh100 flex flexcolumn flexcenter textdark" id="section2">
+<section class="portraithero vh100 flex flexcolumn flexcenter textdark" id="aboutme">
 	<div class="container centered">
 		<?php the_content(); // Dynamic Content ?>
 	</div>
 </section>
 
-<section class="vh100 reversegradient textlight" id="section3">
+<section class="vh100 reversegradient textlight" id="work">
 <div class="container centered">
 	<h1 id="work">Recent Work</h1>
 		<?php // the query
@@ -60,11 +60,25 @@
 
 			</div>
 </section>
-<section class="vh100 textlight linesgradient flex flexcolumn flexcenter" id="section4">
+<section class="vh100 textlight linesgradient flex flexcolumn flexcenter" id="skills">
 <div class="container centered">
 <h1 id="skills">Skills & Talents</h1>
 				<?php 
 					$id=540; 
+					$post = get_post($id); 
+					$content = apply_filters('the_content', $post->post_content); 
+					echo $content;  
+				?>
+
+
+				</div>
+
+</section>
+<section class="rainhero vh100 flex flexcolumn flexcenter textdark" id="obsession">
+<div class="container centered">
+<h1 id="obsession">My Obsession</h1>
+				<?php 
+					$id=612; 
 					$post = get_post($id); 
 					$content = apply_filters('the_content', $post->post_content); 
 					echo $content;  
