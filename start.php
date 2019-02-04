@@ -11,7 +11,7 @@
 		<h1><?php echo get_bloginfo( 'name' ); ?></h1>
 		<h3><?php echo get_bloginfo( 'description' ); ?></h3>
 	</div>
-	<a href="#section2" class="downarrow"><span></span></a>
+	<a href="#work" class="downarrow"><span></span></a>
 </section>
 
 <section class="portraithero vh100 flex flexcolumn flexcenter textdark" id="aboutme">
@@ -60,7 +60,7 @@
 
 			</div>
 </section>
-<section class="vh100 textlight linesgradient flex flexcolumn flexcenter" id="skills">
+<section class="vh100 textlight tealgradient flex flexcolumn flexcenter" id="skills">
 <div class="container centered">
 <h1 id="skills">Skills & Talents</h1>
 				<?php 

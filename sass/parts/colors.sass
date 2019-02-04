@@ -7,14 +7,18 @@ $secondary-color: #5C0026
 $contrast-color: #c9de72
 $cool-grey: rgb(200,202,204)
 $offwhite: rgb(245,247,249)
+$teal: #014058
 
 $awesome-lines: repeating-linear-gradient( 45deg, rgba(white, 0), rgba(white, 0) 3px, rgba(white, 0.05) 3px, rgba(white, 0.05) 6px)
 $dark-gradient: linear-gradient(180deg, $close-to-black,black 100%)
 $awesome-gradient: linear-gradient(180deg, $primary-color 0%,$secondary-color 100%)
 $reverse-gradient: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%)
 $dark-awesome-gradient: linear-gradient(180deg, rgba(36, 68, 98, 0.8) 0% ,$secondary-color 100%)
+
 $transparent-gradient: linear-gradient(180deg, $primary-color 0% , rgba($secondary-color,0.75) 100%)
+$teal-gradient: linear-gradient(180deg, $teal 0% , rgba($teal,0.75) 100%)
 $transparent-light-gradient: linear-gradient(180deg, $offwhite 0% , rgba($cool-grey,0.75) 100%)
+
 $light-awesome-gradient: linear-gradient(180deg, $offwhite 0%,$cool-grey 100%)
 $darker-gradient: linear-gradient(180deg, $primary-color 0% ,darken($primary-color, 25) 66%)
 
@@ -24,6 +28,8 @@ $darker-gradient: linear-gradient(180deg, $primary-color 0% ,darken($primary-col
   background: $awesome-lines, $light-awesome-gradient
 .linesgradient
   background: $awesome-lines, $transparent-gradient
+.tealgradient
+  background: $awesome-lines, $teal-gradient
 .reversegradient
   background: $awesome-lines, $reverse-gradient
 .textlight
