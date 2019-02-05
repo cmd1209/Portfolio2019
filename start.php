@@ -11,7 +11,7 @@
 		<h1><?php echo get_bloginfo( 'name' ); ?></h1>
 		<h3><?php echo get_bloginfo( 'description' ); ?></h3>
 	</div>
-	<a href="#work" class="downarrow"><span></span></a>
+	<a href="#aboutme" class="downarrow"><span></span></a>
 </section>
 
 <section class="portraithero vh100 flex flexcolumn flexcenter textdark" id="aboutme">
