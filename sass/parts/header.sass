@@ -96,8 +96,9 @@ nav.nav
   transform: rotate(0deg)
   transition: .5s ease-in-out
   cursor: pointer
-  &:hover span
-    background-color: $secondary-color
+  &:hover
+    background-color: rgba($primary-color, 0.50)
+ 
 #nav-icon span
   display: block
   position: absolute
@@ -118,6 +119,9 @@ nav.nav
 
 #nav-icon span:nth-child(4) 
   top: 38px
+
+#nav-icon.open span
+  background: $cool-grey
 
 #nav-icon.open span:nth-child(1) 
   top: 26px
