@@ -63,6 +63,8 @@
 <section class="vh100 textlight tealgradient flex flexcolumn flexcenter" id="skills">
 <div class="container centered">
 <h1 id="skills">Skills & Talents</h1>
+
+
 				<?php 
 					$id=540; 
 					$post = get_post($id); 

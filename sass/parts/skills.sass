@@ -1,0 +1,31 @@
+.skill--container
+    width: 25%
+    justify-content: space-around
+
+.skill--bg
+    fill: none
+    stroke: #ffffff27
+    stroke-width: 2.8
+
+.skill--path
+    fill: none
+    stroke: $primary-color
+    stroke-width: 2.8
+    animation: skill-progress 1,5s ease-out forwards, rev 3s ease-in-out infinite alternate
+    animation-delay: 5s
+
+.skill--text
+    fill: #ffffff
+    font-size: 4px
+    text-anchor: middle
+    
+.skill--wrapper
+    display: flex
+
+@keyframes skill-progress
+    0%
+        stroke-dasharray: 0 100
+
+@keyframes rev
+    100%
+        stroke-dasharray: 96 95
