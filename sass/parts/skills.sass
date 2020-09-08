@@ -9,10 +9,8 @@
 
 .skill--path
     fill: none
-    stroke: $primary-color
+    stroke: url(#gradient)
     stroke-width: 2.8
-    animation: skill-progress 1,5s ease-out forwards, rev 3s ease-in-out infinite alternate
-    animation-delay: 5s
 
 .skill--text
     fill: #ffffff
@@ -22,10 +20,64 @@
 .skill--wrapper
     display: flex
 
-@keyframes skill-progress
+.photoshop
+    animation: photoshop-ani 1,5s ease-in-out forwards, photoshop-rev 0.5s ease-in-out infinite alternate
+    animation-delay: 0ms, 5000ms
+
+.html
+    animation: html-ani 1,5s ease-in-out forwards, html-rev 0.5s ease-in-out infinite alternate
+    animation-delay: 0ms, 5000ms
+
+.design
+    animation: design-ani 1,5s ease-in-out forwards, design-rev 0.5s ease-in-out infinite alternate
+    animation-delay: 0ms, 5000ms
+
+.creativ
+    animation: creativ-ani 1,5s ease-in-out forwards, creativ-rev 0.5s ease-in-out infinite alternate
+    animation-delay: 0ms, 5000ms
+
+
+@keyframes photoshop-ani
+    0%
+        stroke-dasharray: 0,100
+    100%
+        stroke-dasharray: 96,100
+
+@keyframes photoshop-rev
+    0%
+        stroke-dasharray: 96,100
+    100%
+        stroke-dasharray: 94,100
+
+
+@keyframes html-ani
+    0%
+        stroke-dasharray: 0,100
+
+@keyframes html-rev
+    0%
+        stroke-dasharray: 84,100
+    100%
+        stroke-dasharray: 82,100
+
+
+@keyframes design-ani
     0%
         stroke-dasharray: 0 100
 
-@keyframes rev
+@keyframes design-rev
+    0%
+        stroke-dasharray: 92 100
     100%
-        stroke-dasharray: 96 95
+        stroke-dasharray: 91 100
+
+
+@keyframes creativ-ani
+    0%
+        stroke-dasharray: 0 100
+
+@keyframes creativ-rev
+    0%
+        stroke-dasharray: 93 100
+    100%
+        stroke-dasharray: 91 100
