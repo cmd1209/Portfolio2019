@@ -29,7 +29,7 @@
     position: absolute
     width: 100%
     height: 100%
-    background-color: rgba($darkestblue,0.9)
+    background-color: rgba(0,0,0,0.95)
     top: 0
     left: 0
     right: 0
@@ -58,7 +58,6 @@
   .project:nth-of-type(#{$i})
     animation-delay: $i * 0.05s
 
-
 // .project:first-of-type
 //     grid-column: span 2
 //     grid-row: span 2
@@ -76,6 +75,7 @@
 
 .portrait
     img
+        border-radius: 100%
         @media (max-width: 780px)
             margin: 0 auto
             max-width: 245px!important

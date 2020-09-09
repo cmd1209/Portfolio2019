@@ -14,8 +14,9 @@
 	<a href="#aboutme" class="downarrow"><span></span></a>
 </section>
 
-<section class="portraithero vh100 flex flexcolumn flexcenter textdark" id="aboutme">
+<section class="portraithero vh100 flex flexcolumn flexcenter textlight tealgradient" id="aboutme">
 	<div class="container centered">
+	<h1 id="work">About Me</h1>
 		<?php the_content(); // Dynamic Content ?>
 	</div>
 </section>
@@ -76,7 +77,7 @@
 				</div>
 
 </section>
-<section class="rainhero vh100 flex flexcolumn flexcenter textdark" id="obsession">
+<section class="rainhero vh100 flex flexcolumn flexcenter textlight" id="obsession">
 <div class="container centered">
 <h1 id="obsession">My Obsession</h1>
 				<?php 
