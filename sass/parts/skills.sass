@@ -1,53 +1,99 @@
-.skill--container
-    width: 25%
-    justify-content: space-around
+.skill
+    width: 7.5em
+    height: auto
+
+.skill--wrapper
+    margin: 0 1em 1em 1em 
 
 .skill--bg
     fill: none
     stroke: #ffffff27
-    stroke-width: 3.6
+    stroke-width: 30 
+    transform: rotate(-90deg)
+    transform-origin: 50% 
+    stroke-dasharray: 408.2 
 
 .skill--path
     fill: none
-    stroke: url(#gradient)
-    stroke-width: 2.8
+    stroke-width: 30
+    transform: rotate(-90deg)
+    transform-origin: 50%
 
 .skill--text
     fill: $close-to-black
-    font-size: 4px
-    text-anchor: middle
-    transform: translate(0,-1px)
-    
-.skill--wrapper
-    display: flex
+    font-size: 2rem
 
-.photoshop
-    animation: dial 5s ease-in-out forwards, rev 1.5s ease-in-out infinite alternate
-    animation-delay: 0ms, 3000ms
-    stroke-dasharray: 96 100
+.dash-ps-null, .dash-il-null, .dash-id-null, .dash-xd-null, .dash-ae-null, .dash-html-null, .dash-css-null, .dash-js-null
+    stroke-dasharray: 0 408.2
 
-.html
-    animation: dial 5s ease-in-out forwards, rev 1.5s ease-in-out infinite alternate
-    animation-delay: 0ms, 3000ms
-    stroke-dasharray: 84 100
+.dash-ps
+    stroke: $secondary-color
+    animation: ps 5s ease-in-out forwards
+.dash-il
+    stroke: $secondary-color
+    animation: il 5s ease-in-out forwards
+.dash-id
+    stroke: $secondary-color
+    animation: id 5s ease-in-out forwards
+.dash-xd
+    stroke: $secondary-color
+    animation: xd 5s ease-in-out forwards
+.dash-ae
+    stroke: $secondary-color
+    animation: ae 5s ease-in-out forwards
 
-.design
-    animation: dial 5s ease-in-out forwards, rev 1.5s ease-in-out infinite alternate
-    animation-delay: 0ms, 3000ms
-    stroke-dasharray: 92 100
+.dash-html
+    stroke: $primary-color
+    animation: html 5s ease-in-out forwards
+.dash-css
+    stroke: $primary-color
+    animation: css 5s ease-in-out forwards
+.dash-js
+    stroke: $primary-color
+    animation: js 5s ease-in-out forwards
 
-.creativ
-    animation: dial 5s ease-in-out forwards, rev 1.5s ease-in-out infinite alternate
-    animation-delay: 0ms, 3000ms
-    stroke-dasharray: 93 100
-
-    
-@keyframes dial
+@keyframes ps
     0%
-        stroke-dasharray: 0 100
-
-@keyframes rev
-    0%
-        stroke-width: 2.8
+        stroke-dasharray: 0 408.2
     100%
-        stroke-width: 3.6
+        stroke-dasharray: 406 408.2
+@keyframes il
+    0%
+        stroke-dasharray: 0 408.2
+    100%
+        stroke-dasharray: 367 408.2
+@keyframes id
+    0%
+        stroke-dasharray: 0 408.2
+    100%
+        stroke-dasharray: 398 408.2
+@keyframes xd
+    0%
+        stroke-dasharray: 0 408.2
+    100%
+        stroke-dasharray: 388 408.2
+@keyframes ae
+    0%
+        stroke-dasharray: 0 408.2
+    100%
+        stroke-dasharray: 320 408.2
+@keyframes html
+    0%
+        stroke-dasharray: 0 408.2
+    100%
+        stroke-dasharray: 380 408.2
+@keyframes css
+    0%
+        stroke-dasharray: 0 408.2
+    100%
+        stroke-dasharray: 376 408.2
+@keyframes js
+    0%
+        stroke-dasharray: 0 408.2
+    100%
+        stroke-dasharray: 225 408.2
+
+
+
+
+        

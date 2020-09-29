@@ -61,7 +61,78 @@
 			$(this).removeClass('hiddenright');
 		}
 	});
-
+	$('.photoshop').one('inview', function(event, isInView) {
+		if (isInView) {
+			$('.dash-ps-null').addClass('dash-ps');
+			$(this).removeClass('dash-ps-null');
+		} else {
+			// element has gone out of viewport
+			$('.dash-ps-null').removeClass('dash-ps-null');
+		}
+	});
+	$('.illustrator').one('inview', function(event, isInView) {
+		if (isInView) {
+			$('.dash-il-null').addClass('dash-il');
+			$(this).removeClass('dash-il-null');
+		} else {
+			// element has gone out of viewport
+			$('.dash-il-null').removeClass('dash-il-null');
+		}
+	});
+	$('.indesign').one('inview', function(event, isInView) {
+		if (isInView) {
+			$('.dash-id-null').addClass('dash-id');
+			$(this).removeClass('dash-id-null');
+		} else {
+			// element has gone out of viewport
+			$('.dash-id-null').removeClass('dash-id-null');
+		}
+	});
+	$('.experience').one('inview', function(event, isInView) {
+		if (isInView) {
+			$('.dash-xd-null').addClass('dash-xd');
+			$(this).removeClass('dash-xd-null');
+		} else {
+			// element has gone out of viewport
+			$('.dash-xd-null').removeClass('dash-xd-null');
+		}
+	});
+	$('.aftereffects').one('inview', function(event, isInView) {
+		if (isInView) {
+			$('.dash-ae-null').addClass('dash-ae');
+			$(this).removeClass('dash-ae-null');
+		} else {
+			// element has gone out of viewport
+			$('.dash-ae-null').removeClass('dash-ae-null');
+		}
+	});
+	$('.html').one('inview', function(event, isInView) {
+		if (isInView) {
+			$('.dash-html-null').addClass('dash-html');
+			$(this).removeClass('dash-html-null');
+		} else {
+			// element has gone out of viewport
+			$('.dash-html-null').removeClass('dash-html-null');
+		}
+	});
+	$('.css').one('inview', function(event, isInView) {
+		if (isInView) {
+			$('.dash-css-null').addClass('dash-css');
+			$(this).removeClass('dash-css-null');
+		} else {
+			// element has gone out of viewport
+			$('.dash-css-null').removeClass('dash-css-null');
+		}
+	});
+	$('.js').one('inview', function(event, isInView) {
+		if (isInView) {
+			$('.dash-js-null').addClass('dash-js');
+			$(this).removeClass('dash-js-null');
+		} else {
+			// element has gone out of viewport
+			$('.dash-js-null').removeClass('dash-js-null');
+		}
+	});
 
 		$(document).on('click', '.burger, .menu-item', function () {
 			$('.burger').toggleClass('open');
@@ -72,7 +143,6 @@
 		$(document).on('click', '.back', function () {
 			$(location).attr('href', 'https://www.chadmdanford.com/#work');
 		});
-
 
 
 		// Select all links with hashes

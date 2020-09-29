@@ -7,16 +7,16 @@
 
 <section class="linesgradient vh100 flex flexcolumn flexcenter textlight" id="hero">
 	<?php include('herologo.php'); ?>
-	<div class="container centered bounce-in-right delay3">
-		<h1><?php echo get_bloginfo( 'name' ); ?></h1>
-		<h3><?php echo get_bloginfo( 'description' ); ?></h3>
+	<div class="container centered">
+		<!-- <h1><?php echo get_bloginfo( 'name' ); ?></h1> -->
+		<h1 class="intro"><span class=" intro-left">creating</span> <span class=" intro-right">making</span> <span class=" intro-right">coding</span> <span class=" intro-left">shooting</span> <span class=" intro-left ">framing</span> <span class=" intro-right">editing</span> <span class=" intro-left">developing</span> <span class=" intro-right">brainstorming</span> </br><span class=" intro-right">since 1999!</span></h1>
 	</div>
 	<a href="#aboutme" class="downarrow"><span></span></a>
 </section>
 
 <section class="vh100 flex flexcolumn flexcenter textdark lineslightgradient" id="aboutme">
 	<div class="container centered">
-	<h1 id="aboutme">About Me</h1>
+	<h1 id="aboutme">Chad Matthew Danford</h1>
 		<?php the_content(); // Dynamic Content ?>
 	</div>
 </section>
@@ -74,7 +74,10 @@
 				?>
 
 
-				</div>
+</div>
+<div class="container centered">
+	<?php include('skills.php'); ?>
+</div>
 
 </section>
 <section class="portraithero vh100 flex flexcolumn flexcenter textlight" id="obsession">

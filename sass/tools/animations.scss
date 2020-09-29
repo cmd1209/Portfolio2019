@@ -1,4 +1,13 @@
- .bounce-in-right {
+.bounce-in-right {
+	-webkit-animation: bounce-in-right 1.1s both;
+	        animation: bounce-in-right 1.1s both;
+}
+
+.intro-left {
+	-webkit-animation: bounce-in-left 1.1s both;
+	        animation: bounce-in-left 1.1s both;
+}
+.intro-right {
 	-webkit-animation: bounce-in-right 1.1s both;
 	        animation: bounce-in-right 1.1s both;
 }

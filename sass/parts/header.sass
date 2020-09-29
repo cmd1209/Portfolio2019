@@ -11,6 +11,14 @@ header.startheader
 .inviewport
   transform: translateX(0)
   transition: all 0.3s ease-in-out
+ 
+.intro
+  span
+    display: inline-block
+@for $i from 1 to 9
+  .intro span:nth-of-type(#{$i})
+    animation-delay: $i * 0.1s
+
 
 .startheader-logo
   width: 75px
